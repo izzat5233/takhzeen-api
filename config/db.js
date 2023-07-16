@@ -10,15 +10,10 @@ const client = new MongoClient(uri, {
     }
 });
 
-let conn;
-let db;
 try {
-    conn = await client.connect();
-    db = await conn.db(process.env.DB_NAME);
-    await db.command({ping: 1});
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    conn = client.connect();
 } catch (e) {
     console.error(e);
 }
 
-module.export = db;
+module.exports = client;
