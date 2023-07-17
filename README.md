@@ -1,5 +1,7 @@
 # API Manual
 
+The API is live at https://takhzeen.azurewebsites.net/ for now.
+
 ## Setup
 
 - Create a new file in the root folder named `.env` as follows:
@@ -11,6 +13,7 @@
   ```
 
 - Ask the IT department for the values and fill them out.
+- **Make sure `.env` file is never uploaded to Github.**
 
 ## Endpoints
 
