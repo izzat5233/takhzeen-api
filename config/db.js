@@ -16,4 +16,8 @@ try {
     console.error(e);
 }
 
-module.exports = client;
+function getDB() {
+    return client.db(process.env.DB_NAME);
+}
+
+module.exports = getDB;
