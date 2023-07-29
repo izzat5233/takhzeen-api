@@ -1,4 +1,5 @@
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -9,6 +10,10 @@ const usersRouter = require('./routes/users');
 const findRouter = require('./routes/find');
 
 const app = express();
+
+app.use(cors({
+    origin: 'http://localhost:3000' // Allow only this origin
+}));
 
 app.use(logger('dev'));
 app.use(express.json());
