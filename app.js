@@ -11,7 +11,7 @@ const formRouter = require('./routes/form');
 
 const app = express();
 
-const allowedOrigins = process.env.CORS_ORIGINS.split(',');
+const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
 
 app.use(cors({
     origin: function (origin, callback) {
