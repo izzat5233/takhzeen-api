@@ -7,10 +7,11 @@ The API is live at https://takhzeen.azurewebsites.net/ for now.
 - Create a new file in the root folder named `.env` as follows:
 
 ```
-  DB_NAME=...
-  DB_USER=...
-  DB_PASS=...
-  JWT_SECRET=...
+  DB_NAME=...[the database name]
+  DB_USER=...[the database username]
+  DB_PASS=...[the database password]
+  JWT_SECRET=...[the JWT generator secret, any random value]
+  ALLOWED_ORIGINGS=...[the website domains allowed to access this server]
   ```
 
 - Ask the IT department for the values and fill them out.
