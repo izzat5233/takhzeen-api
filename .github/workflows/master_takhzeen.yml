@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'takhzeen'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_19259EE4212142E2A08EFC093F28A1BE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0B8DF6AE8E364010AF221E40823140A1 }}
           package: .
