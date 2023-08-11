@@ -37,8 +37,18 @@ Client safe endpoints:
 - `GET /form` Returns the form corresponding to the token in the authorization header.
 - `PATCH /form` Updates the form corresponding to the token in the authorization header.
 
-### '/storage'
+### `/storage`
 
 **related to all storages data**
 
-- `GET /storage` Returns all storages data in the database.
+You can filter fields sent with the storages data.
+Note that _id field will always be sent with the data.
+
+- `GET /storage`
+  Returns all storages data in the database. All fields included.
+- `GET /storage?fields=location,price...`
+  Returns all storages in the database. Only selected fields are included. Useful for a smaller response size.
+- `GET /storage/{storageId}`
+  Returns the storage with the specified Id. All fields included.
+- `GET /storage/{storageId}?fields=location,price...`
+  Returns the storage with the specified Id. Only selected fields are included.

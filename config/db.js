@@ -1,4 +1,4 @@
-const {MongoClient, ServerApiVersion} = require('mongodb');
+const {MongoClient, ServerApiVersion, ObjectId} = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@takhzeencluster.spizhqq.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -20,4 +20,8 @@ function getDB() {
     return client.db(process.env.DB_NAME);
 }
 
-module.exports = getDB;
+function isValidObjectId(id) {
+    return ObjectId.isValid(id) && String(new ObjectId(id)) === id;
+}
+
+module.exports = {getDB, isValidObjectId};

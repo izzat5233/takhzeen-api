@@ -2,7 +2,7 @@ const express = require('express');
 const {ObjectId} = require("mongodb");
 const router = express.Router();
 const {authenticateJWT, signJWT} = require("../config/jwt");
-const getDB = require('../config/db');
+const {getDB} = require('../config/db');
 const forms = getDB().collection("forms");
 
 router.get('/', function (req, res) {
